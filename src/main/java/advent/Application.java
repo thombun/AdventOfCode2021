@@ -1,13 +1,13 @@
 package advent;
 
-import advent.Advent8.Advent8;
+import advent.advent9.Advent9;
 
 import java.io.IOException;
 
 public class Application {
 
     public static void main(String[] args) throws IOException {
-        Advent8 advent = new Advent8();
+        Advent9 advent = new Advent9();
         advent.calc();
     }
 }
