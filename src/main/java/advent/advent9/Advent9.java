@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Advent9 {
 
-    public static final String FILE = "ad9.txt";
+    public static final String FILE = "ad9spiral.txt";
     private Integer[][] heightMap = null;
 
     public void calc() throws IOException {
@@ -47,6 +47,7 @@ public class Advent9 {
         int resultOne = part1();
         List<Integer> result = part2();
         result.sort(Comparator.reverseOrder());
+        System.out.println(result.get(0));
         int sum = result.get(0) * result.get(1) * result.get(2);
         System.out.println("result1: " + resultOne);
         System.out.println("result2: " + sum);
