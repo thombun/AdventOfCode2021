@@ -6,6 +6,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.time.Duration;
+import java.time.Instant;
 
 public class Advent15 {
 
@@ -18,6 +20,7 @@ public class Advent15 {
     private Integer[][] mapLookup;
 
     public void calc() throws IOException {
+        Instant now = Instant.now();
         InputStream inputStream = Loader.loadFile(FILE);
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
@@ -51,7 +54,8 @@ public class Advent15 {
         }
 
         int path = part1();
-        System.out.println("result: " + path);
+        Instant now1 = Instant.now();
+        System.out.println("result: " + path + " took: " + Duration.between(now, now1).toMillis());
     }
 
     private int part1() {
